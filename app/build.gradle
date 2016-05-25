@@ -42,6 +42,8 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.4.0'
     compile 'com.google.android.gms:play-services:9.0.0'
     compile project(path: ':jokes_backend', configuration: 'android-endpoints')
-//    testCompile 'junit:junit:4.12'
-//    androidTestCompile 'org.testng:testng:6.9.6'
+    testCompile 'junit:junit:4.12'
+    androidTestCompile ('org.testng:testng:6.9.6'){
+        exclude group: 'org.hamcrest', module: 'hamcrest-core'
+    }
 }
